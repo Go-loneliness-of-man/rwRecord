@@ -1,0 +1,22 @@
+{
+  "name": "rw_record",
+  "version": "1.0.0",
+  "description": "适用于需要高自由度场景的 node 日志插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Go-loneliness-of-man/rwRecord.git"
+  },
+  "author": "刃舞",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Go-loneliness-of-man/rwRecord/issues"
+  },
+  "homepage": "https://github.com/Go-loneliness-of-man/rwRecord#readme",
+  "dependencies": {
+    "dayjs": "^1.10.3"
+  }
+}
