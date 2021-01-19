@@ -1,5 +1,5 @@
 # rwRecord
-node 日志插件
+适用于高自由度场景的 node 日志插件
 
 # 使用
 
