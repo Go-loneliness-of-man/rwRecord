@@ -18,27 +18,36 @@ const render = (kv) => { // 渲染函数
 
 const demo1 = new Record(root, typeList, render, env);
 
+// 基本用法
 demo1.test({
     title: '测试',
     content: '测试内容1',
 });
-
 demo1.test({
     title: '测试',
     content: '测试内容2',
 });
 
-// 修改默认行后再执行
+// 在写入时传入 render，替换全局 render
+const render2 = () => '\n直接传入 render，替换全局 render';
+demo1.test({
+    title: '测试2',
+    content: '测试内容3',
+}, render2);
+demo1.test({
+    title: '测试2',
+    content: '测试内容4',
+}, render2);
+
+// 修改默认行后再执行，由于同步代码执行快于异步执行的队列，这里延迟 1s 再修改配置演示
 setTimeout(() => {
     demo1.defaultRows = () => '\n\n自定义默认行';
     demo1.test({
-        title: '测试2',
-        content: '测试内容3',
+        title: '测试3',
+        content: '测试内容5',
     });
-
     demo1.test({
-        title: '测试2',
-        content: '测试内容4',
+        title: '测试3',
+        content: '测试内容6',
     });
 }, 1000);
-
